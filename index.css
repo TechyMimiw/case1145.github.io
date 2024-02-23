@@ -1,0 +1,11 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.type-line p {
+    font-family: 'Consolas';
+    color: chartreuse;
+    position: relative;
+    margin: 3px;
+}
