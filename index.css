@@ -3,9 +3,39 @@ body {
     color: #ffffff;
 }
 
-.type-line p {
+ul {
+    margin: 0;
+    padding: 3px;
+}
+
+.type-line li, .type-line input, .cursor {
     font-family: 'Consolas';
+    font-size: 16px;
     color: chartreuse;
     position: relative;
     margin: 3px;
+}
+
+.type-line li {
+    list-style-type: none;
+    margin: 0;
+}
+
+.starting-code li:nth-child(13) {
+    color: red;
+}
+
+.channel-chat input {
+    background-color: transparent;
+    border: none;
+    width: 22em;
+}
+
+.cursor span {
+    animation: blink .5s linear infinite;
+}
+
+@keyframes blink {
+    0% { border-right: 5px solid chartreuse; }
+    70% { border: transparent; }
 }
