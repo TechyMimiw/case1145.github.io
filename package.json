@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/TechyMimiw/case1145/issues"
   },
-  "homepage": "https://github.com/TechyMimiw/case1145#readme"
+  "homepage": "https://github.com/TechyMimiw/case1145#readme",
+  "dependencies": {
+    "express": "^4.18.3",
+    "nodemon": "^3.1.0"
+  }
 }

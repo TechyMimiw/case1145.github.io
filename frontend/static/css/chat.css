@@ -1,0 +1,39 @@
+#chatbox .card {
+    max-width: 30rem;
+}
+
+#chatbox .card-header img {
+    width: 64px;
+    height: 64px;
+}
+
+#chatbox .card-body img {
+    width: 46px;
+    height: 46px;
+    border: 1px solid var(--bs-card-border-color);
+}
+
+#chatbox .profile-status {
+    font-size: smaller;
+}
+
+#chatbox div.msg-you,
+#chatbox div.msg-serial {
+    margin-bottom: 0.75rem;
+}
+
+#chatbox div.msg-you div div {
+    max-width: 20rem;
+    padding: 0.5rem;
+    margin: 1px 0.3rem;
+    border-radius: 0.4rem;
+    border-top-right-radius: 0.1rem;
+}
+
+#chatbox div.msg-serial div div {
+    max-width: 20rem;
+    padding: 0.5rem;
+    margin: 1px 0.3rem;
+    border-radius: 0.4rem;
+    border-top-left-radius: 0.1rem;
+}
