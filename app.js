@@ -38,6 +38,6 @@ app.get("/congratulations", (req, res) => {
     res.sendFile(path.resolve(__dirname, "frontend", "evidence.html"));
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Example app listening on port ${port}`);
+// });
