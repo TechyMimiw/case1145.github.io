@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/TechyMimiw/case1145#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.3",
     "nodemon": "^3.1.0"
   }

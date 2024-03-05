@@ -12,12 +12,67 @@
 </head>
 
 <body>
-    <div class="container m-3 p-3 mx-auto border border-warning rounded">
-        <h3 class="">channel::case-1154</h3>
+    <div class="container d-flex justify-content-center m-3 p-3 mx-auto">
+        
+        <div class="card me-3 border border-warning" id="chatbox">
+            <div class="card-header">
+                <div class="d-flex align-middle">
+                    <h3 class="">channel::case-1154</h3>
+                </div>
+            </div>
 
-        <div id="chatbox">
-            <div class="card mb-3">
-                <div class="card-header">
+            <!-- Messages -->
+            <div class="card-body d-flex flex-column justify-content-end">
+
+                <!-- Template for System message -->
+                <template id="msg-system-template">
+                    <div class="card-text text-start msg-system">
+                        <div class="d-flex justify-content-center">
+                            <span class="msg-container">System message</span>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- Template for Serial's message -->
+                <template id="msg-serial-template">
+                    <div class="card-text text-start msg-serial">
+                        <div class="d-flex justify-content-start">
+                            <img src="/static/assets/53r1@L-pfp.png" class="card-img" alt="53r1@L-pfp.png">
+                            <div>
+                                <span class="msg-container">Hello, peasant!</span>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- Template for Your message -->
+                <template id="msg-you-template">
+                    <div class="card-text text-end msg-you">
+                        <div class="d-flex justify-content-end">
+                            <div>
+                                <span class="msg-container">I'm not a peasant!</span>
+                            </div>
+                            <img src="/static/assets/peasant-timmie.png" class="card-img" alt="peasant-timmie.png">
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+
+            <form id="msg-input-form">
+                <div class="card-footer input-group">
+                    <input type="text" class="form-control" id="msg-input" placeholder="Type message here...">
+                    <button type="button" class="btn btn-outline-warning" id="send-btn">SEND</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card" id="member-list">
+            <div class="card-header">
+                Online Members (2)
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="member-serial">
                     <div class="d-flex align-middle">
                         <img src="/static/assets/53r1@L-pfp.png" class="card-img" alt="53r1@L-pfp.png">
                         <div class="mx-2">
@@ -25,37 +80,17 @@
                             <span class="profile-status">Bold of you to lay your gaze upon me, peasant.</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Messages -->
-                <div class="card-body">
-
-                    <!-- Template for Serial's message -->
-                    <template id="msg-serial-template">
-                        <div class="card-text text-start msg-serial">
-                            <div class="d-flex justify-content-start">
-                                <img src="/static/assets/53r1@L-pfp.png" class="card-img" alt="53r1@L-pfp.png">
-                                <div class="text-bg-primary">
-                                    <span class="msg-container">Hello, peasant!</span>
-                                </div>
-                            </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex align-middle" id="member-peasant">
+                        <img src="/static/assets/peasant-timmie.png" class="card-img" alt="peasant-timmie.png">
+                        <div class="mx-2">
+                            <h5 class="m-0">Peasant (You)</h5>
+                            <span class="profile-status">[Empty status...]</span>
                         </div>
-                    </template>
-
-                    <!-- Template for Your message -->
-                    <template id="msg-you-template">
-                        <div class="card-text text-end msg-you">
-                            <div class="d-flex justify-content-end">
-                                <div class="text-bg-secondary">
-                                    <span class="msg-container">I'm not a peasant!</span>
-                                </div>
-                                <img src="/static/assets/peasant-timmie.png" class="card-img" alt="peasant-timmie.png">
-                            </div>
-                        </div>
-                    </template>
-
-                </div>
-            </div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
     </div>

@@ -1,0 +1,31 @@
+body {
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+#main-container {
+    margin-top: 10rem;
+}
+
+.toast {
+    top: 1rem;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, 0px);
+    z-index: 9999;
+    font-size: larger;
+}
+
+.clown-text {
+    font-size: 400%;
+    margin: 0;
+    animation: rotateClown 5s infinite;
+}
+
+@keyframes rotateClown {
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
