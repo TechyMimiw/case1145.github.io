@@ -7,12 +7,6 @@ const port = 5000;
 const jsonParser = bodyParser.json();
 
 app.use("/static", express.static(path.resolve(__dirname, "frontend", "static")));
-app.get("/", (req, res) => {
-    //   res.send("Hello LazyMimiw! 😸");
-    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
-
-});
-
 app.get("/case-1154", (req, res) => {
     res.sendFile(path.resolve(__dirname, "frontend", "chat.html"));
 });
@@ -36,6 +30,12 @@ app.post("/login", jsonParser, function (req, res) {
 
 app.get("/congratulations", (req, res) => {
     res.sendFile(path.resolve(__dirname, "frontend", "evidence.html"));
+});
+
+app.get("/", (req, res) => {
+    //   res.send("Hello LazyMimiw! 😸");
+    res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
+
 });
 
 // app.listen(port, () => {
